@@ -1,0 +1,33 @@
+body {
+    height:100vh;
+    background: url('images/bg.jpg');
+    background-size:cover;
+    position:relative;
+}
+.wlc {
+    font-size: 4.5rem;
+    color:rgb(20, 20, 20);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.msg {
+    font-size: 2rem;
+    color: #0f0f0f;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #3498db;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 25%;
+}
+.text{
+    color: white;
+    font-size:2em ;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 35%;
+}
