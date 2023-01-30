@@ -20,12 +20,12 @@
                 <div class="row">
                   <div class="col-4">
                     <div class="circle">
-                        <div class="text">CHECK IN<br><div class="number">15</div>JAN,2023</div>
+                      <div class="text"><p class="text-white text-center mt-5" id="Date1"></p></div>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="circle">
-                      <div class="text">CHECK OUT<br><div class="number">16</div>JAN,2023</div>
+                      <div class="text"><p class="text-white text-center mt-5" id="Date2"></p></div>
                     </div>
                   </div>
                   <div class="col-4">
@@ -36,5 +36,13 @@
                 </div>
           </div>
         </div>
-      </div>      
+      </div>   
+      <script>
+        function displayDate(id, year, month, day) {
+          var date = new Date(year, month, day);
+          document.getElementById(id).innerHTML = date.toDateString();
+        }
+        displayDate("Date1", 2023, 0, 30);
+        displayDate("Date2", 2023, 1, 15);
+      </script>
 </body>

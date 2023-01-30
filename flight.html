@@ -15,25 +15,25 @@
             <h1 class="wlc">WE'RE ON IT !</h1>
             <h3 class="msg"> In a few moments , you'll be celebrating the best available rate!</h3>
           </div>
-          <div class="col-12 text-center">
+          <div class="col-12 d-flex justify-content-center">
             <div class="container">
                 <div class="row">
-                  <div class="col-3">
+                  <div class="col-3 d-flex align-items-center">
                     <div class="circle">
                         <div class="text"><div class="bigger">DEPARTURE:<br>TUNISIA</div></div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-3 d-flex align-items-center">
                     <div class="circle">
                       <div class="text"><div class="bigger">DESTINATION:<br>ITALY</div></div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-3 d-flex align-items-center">
                     <div class="circle">
-                      <div class="text">DATE:<br><div class="number">4</div>SEPTEMBEr</div>
+                      <div class="text"><p class="text-white text-center mt-5" id="customDate"></p></div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-3 d-flex align-items-center">
                     <div class="circle">
                       <div class="text">PASSENGER<br><div class="number">1</div>PASSENGER(S)</div>
                     </div>
@@ -41,5 +41,12 @@
                 </div>
           </div>
         </div>
-      </div>      
+      </div>
+      <script>
+        function displayDate(year, month, day) {
+          var date = new Date(year, month, day);
+          document.getElementById("customDate").innerHTML = date.toDateString();
+        }
+        displayDate(2023, 0, 30);
+      </script>      
 </body>
