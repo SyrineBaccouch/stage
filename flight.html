@@ -12,30 +12,30 @@
     <div class="container h-100 d-flex justify-content-center align-items-center">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-            <h1 class="wlc">WE'RE ON IT !</h1>
-            <h3 class="msg"> In a few moments , you'll be celebrating the best available rate!</h3>
+            <h1 class="wlc"><div id="welcome"></div></h1>
+            <h3 class="msg"><div id="wait"></div></h3>
           </div>
           <div class="col-12 d-flex justify-content-center">
             <div class="container">
                 <div class="row">
                   <div class="col-3 d-flex align-items-center">
                     <div class="circle">
-                        <div class="text"><div class="bigger">DEPARTURE:<br>TUNISIA</div></div>
+                        <div class="text"><div id="depart"></div></div>
                     </div>
                   </div>
                   <div class="col-3 d-flex align-items-center">
                     <div class="circle">
-                      <div class="text"><div class="bigger">DESTINATION:<br>ITALY</div></div>
+                      <div class="text"><div id="destin"></div></div>
                     </div>
                   </div>
                   <div class="col-3 d-flex align-items-center">
                     <div class="circle">
-                      <div class="text"><p class="text-white text-center mt-5" id="customDate"></p></div>
+                      <div class="text"><p class="text-white text-center mt-5" id="Date"></p></div>
                     </div>
                   </div>
                   <div class="col-3 d-flex align-items-center">
                     <div class="circle">
-                      <div class="text">PASSENGER<br><div class="number">1</div>PASSENGER(S)</div>
+                      <div class="text"><div id="passenger"></div></div>
                     </div>
                   </div>
                 </div>
@@ -45,8 +45,23 @@
       <script>
         function displayDate(year, month, day) {
           var date = new Date(year, month, day);
-          document.getElementById("customDate").innerHTML = date.toDateString();
+          document.getElementById("Date").innerHTML = date.toDateString();
         }
         displayDate(2023, 0, 30);
+        document.getElementById("welcome").innerHTML = "WE'RE ON IT !";
+        document.getElementById("wait").innerHTML = "In a few moments , you'll be celebrating the best available rate!";
+        function Passengers(numOfPassengers) {
+          document.getElementById("passenger").innerHTML = 'Passengers: ' + numOfPassengers;
+        }
+        Passengers(1);
+        function Departure(country) {
+          document.getElementById("depart").innerHTML = 'Departure: ' + country ;
+        }
+        Departure("Tunisia");
+        function Destination(country) {
+          document.getElementById("destin").innerHTML = 'Destination: ' + country ;
+        }
+        Destination("Italy");
+
       </script>      
 </body>
